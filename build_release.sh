@@ -16,11 +16,18 @@ fi
 
 VERSON_FILE=~/chromium/src/chrome/VERSION
 # Bump Version
-cp ~/chromium/VERSION ${VERSON_FILE}
+cp ~/chromium/VERSION ${VERSON_FILE} > /dev/null
+# MAJOR
 MAJOR=$(head -n 1 ${VERSON_FILE})
 version=${MAJOR#*_}
 version=$((version + 1))
 sed -i "1s/.*/MAJOR=${version}/" ${VERSON_FILE}
+# BUILD
+BUILD=$(sed -n '3p' < ${VERSON_FILE})
+build_version=${BUILD#*_}
+build_version=$((build_version + 1))
+sed -i "s/^BUILD.*$/BUILD=${build_version}/" ${VERSON_FILE}
+
 cp ${VERSON_FILE} ~/chromium/VERSION
 cat ${VERSON_FILE}
 
