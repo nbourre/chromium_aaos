@@ -1,6 +1,5 @@
 This repo has a patch to enable chromium to be ran on android automotive, along with scritps to help ease the build process. 
-# Setup
-## Source control 
+# Android Setup
 ```
 cd ~/
 git clone https://github.com/zunichky/chromium_aaos.git chromium
@@ -8,16 +7,15 @@ cd chromium
 ```
 Follow the offical [google chromium guide](https://chromium.googlesource.com/chromium/src/+/main/docs/android_build_instructions.md)  
 During the "Setting up the build", run ``` gn args out/Release_arm64``` and copy the contents of [Release_arm64.gn](/Release_arm64.gn).
-To build, you could continue to use the offical guide but all instructions going forward will use scripts. It is helpful to still have the chromium guide pulled up. 
-## Building for target
+To build, you could continue to use the offical guide but these instructions going forward will use custom build scripts. It is helpful to still have the chromium guide pulled up while running through this readme. 
+# Building
 ### Dependencies
 The following folder structure exists  
 ```
 |---$HOME  
-|        pull_latest.sh
-|        etc.
-|    |---chromium   
-|        |---src  
+|      pull_latest.sh
+|      etc.   
+|      |---src  
 |---Android  
 |    |---Sdk  
 |        |---build-tools  
@@ -31,6 +29,7 @@ Run ```./pull_latest.sh```. This will:
 1. Fetch the latest chromium code
 2. Apply a patch to make the app "AAOS compatible"
 3. runhooks  
+## Building for target
 
 ### Making a release
 Run ```./build_release.sh```. This proces will take hours to complete. This will:
@@ -44,7 +43,7 @@ Output: ```$HOME/chromium/src/out/Release_arm64/apks/MonochromePublic6432.aab```
 **TODO**  
 ```./build_apk.sh ```
 
-# Uploading to Play Store
+## Uploading to Play Store
 **TODO**  
 1. Create dev account 
 2. Go to [Google Play Console](https://play.google.com/console)
