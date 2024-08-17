@@ -12,16 +12,17 @@ To build, you could continue to use the offical guide but these instructions goi
 ### Dependencies
 The following folder structure exists  
 ```
-|---$HOME  
-|      pull_latest.sh
-|      etc.   
-|      |---src  
-|---Android  
-|    |---Sdk  
-|        |---build-tools  
-|---Documents
-|    |---KeyStore
-|           store.jks
+|$HOME
+|  |--chromium
+|       pull_latest.sh
+|       etc.   
+|     |--src  
+|  |--Android  
+|     |--Sdk  
+|        |--build-tools  
+|  |--Documents
+|     |--KeyStore
+|          store.jks
 ```
 Android build tools is needed for the signing of the aab. I used android studio to create my signing key, but I'm sure there is an terminal command to accomplish creating a .jks.  
 ### Apply automotive path to source
