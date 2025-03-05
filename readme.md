@@ -45,16 +45,15 @@ Run ```./pull_latest.sh```. This will:
 ## Building for target
 
 ## Create a keystore
-**TODO** : You must create a keysotre to sign the app.
 
-Eg :
+You must create a keysotre to sign the app before building. You can create a keystore using the following command.
 
 ```
 keytool -genkeypair -v   -keystore ~/Documents/KeyStore/store.jks   -alias android_app
   -keyalg RSA   -keysize 2048   -validity 10000
 ```
 
-- The folder must exist before running the script.
+- The folder must exist before running the command.
 
 ### Making a release
 Run ```./build_release.sh```. This proces will take hours to complete. This will:
