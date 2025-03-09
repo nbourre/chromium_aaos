@@ -1,7 +1,7 @@
 # Installation instructions
 
 ## Setup from iPhone
-- Open the link in Safari
+- Open the link from the in Safari
 - Connect to Play Store with the account used in your car
 
 ![alt text](assets/iOSa.jpg)

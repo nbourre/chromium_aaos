@@ -84,4 +84,4 @@ Output: ```$HOME/chromium/src/out/Release_arm64/apks/MonochromePublic6432.aab```
 5. Publish app to internal testing
 6. Add privacy statement
 7. Add testers emails
-8. Go to the "Copy link" URL and install the app to your target device
+8. In the "How testers join your test", click "Copy link" URL and install the app to your target device
