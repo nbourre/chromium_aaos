@@ -11,8 +11,11 @@ git clone https://github.com/zunichky/chromium_aaos.git chromium
 cd chromium
 ```
 
-- Follow the offical [google chromium guide](https://chromium.googlesource.com/chromium/src/+/main/docs/android_build_instructions.md) down to "Setting up the build".
-- When you get to "Setting up the build", run ```gn gen out/Release_arm64``` and copy the contents of [Release_arm64.gn](/Release_arm64.gn).  
+1. Follow the offical [google chromium guide](https://chromium.googlesource.com/chromium/src/+/main/docs/android_build_instructions.md) down to "Setting up the build".
+2. When you get to "Setting up the build", run ```gn gen out/Release_arm64``` and copy the contents of [Release_arm64.gn](/Release_arm64.gn).  
+3. Change the content of `Release_arm64.gn` where it says `CHANGEME` to something else unique such as your name with no spaces.
+4. Save the changes and continue to the next step here.
+
 - To build you could continue to use the offical guide but these instructions going forward will use custom build scripts. It is helpful to still have the chromium guide pulled up while running through this readme.
 
 # Building
